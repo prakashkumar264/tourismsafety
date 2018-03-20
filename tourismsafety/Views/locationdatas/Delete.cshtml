@@ -1,0 +1,176 @@
+﻿@model tourismsafety.Models.locationdata
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>locationdata</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.locationid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.locationid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.purposeid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.purposeid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.hygieneissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.hygieneissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.hygienesolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.hygienesolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.foodissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.foodissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.foodsolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.foodsolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.transportationissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.transportationissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.transportationsolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.transportationsolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.beggarissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.beggarissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.beggarssolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.beggarssolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.accomodationissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.accomodationissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.accomodationsolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.accomodationsolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.womensafetyissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.womensafetyissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.womensafetysolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.womensafetysolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.miscellaneousissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.miscellaneousissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.miscellaneoussolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.miscellaneoussolution)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.culturalissues)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.culturalissues)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.culturalsolution)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.culturalsolution)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+﻿@model IEnumerable<tourismsafety.Models.locationdata>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" src="../js/semantic.js">
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+    <h1 class="ui header" align="center" id="header1">@Html.DisplayFor(modelItem => item.locationname)</h1>
+        <div class="ui container">
+
+            <div class="ui grid">
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Hygiene</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.hygieneissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.hygienesolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p> @Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Dining & Food</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.foodissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.foodsolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Transportation</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.transportationissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.transportationsolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Beggar Issues</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.beggarsissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.beggarssolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Accomodation</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.accomodationissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.accomodationsolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Women Safety</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.womensafetyissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p> @Html.DisplayFor(modelItem => item.womensafetysolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Cultural Issues</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.culturalissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>  @Html.DisplayFor(modelItem => item.culturalsolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a href="Solution.html">
+                        <div class="ui raised link card">
+                            <div class="content">
+                                <div class="header" align="center">Miscellaneous</div>
+                                <div class="meta">
+                                    <span class="category"><b>Problem</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.miscellaneousissues)</p><hr>
+                                </div>
+                                <div class="meta">
+                                    <span class="category"><b>Solution</b></span>
+                                </div>
+                                <div class="description">
+                                    <p>@Html.DisplayFor(modelItem => item.miscellaneoussolution)</p>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="right floated author">
+                                    <p>@Html.ActionLink("Details", "Details", new { id = item.id })</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            }
+        </div>
+    }
+</body>
+    
+<br>
+<br>
+<br>
+<br>
+</html>

@@ -1,0 +1,58 @@
+﻿@model tourismsafety.Models.search
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+
+    <link href="~/css/semantic.css" rel="stylesheet" />
+    <script src="~/css/semantic.js"></script>
+    <link href="~/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Select -->
+    <div class="ui grey inverted raised segment">
+        <h1 align="center" class="main"> Welcome to Touristo </h1>
+
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="signup.html">SIGNUP</a></li>
+    </nav>
+
+    <div class="col-md-6" align="center">
+        @using (Html.BeginForm("submitlocation", "login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <div align="center" class="main-div">
+
+                @Html.DropDownListFor(x => x.locationid, new SelectList(Model.locations, "id", "name"), "Select location", new { @class = "ui blue search dropdown" })
+
+
+            </div>
+            <br><br>
+            <div align="center" class="sec-div">
+
+                @Html.DropDownListFor(x => x.purposeid, new SelectList(Model.purposes, "id", "name"), "Select purpose", new { @class = "ui blue search dropdown" })
+
+            </div>
+            <br><hr><br>
+
+            <input class="ui black button" type="submit" value="Next" />
+
+        }
+    </div>
+    <!-- #END# Select -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+</body>
+</html>

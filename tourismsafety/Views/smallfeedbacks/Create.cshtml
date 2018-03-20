@@ -1,0 +1,101 @@
+﻿@model tourismsafety.Models.smallfeedback
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+</body>
+
+<link href="~/css/semantic.css" rel="stylesheet" />
+<link href="~/css/style.css" rel="stylesheet" />
+<script src="~/css/semantic.js"></script>
+
+<header>
+    <div class="ui grey inverted raised segment">
+        <h1 align="center" class="main"> Welcome to Touristo </h1>
+    </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="signup.html">SIGNUP</a></li>
+    </nav>
+
+</header>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+<h1 class="ui header" align="center" id="header1">Feedback</h1>
+<div class="imagebg"></div>
+<div class="row " style="margin-top: 50px">
+    <div class="col-md-6 col-md-offset-3 form-container">
+
+        <h2>
+            Please provide your feedback below:
+        </h2>
+
+        @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+        
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.goodexp, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.goodexp, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.goodexp, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.badexp, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.badexp, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.badexp, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.advice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.advice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.advice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+
+
+    </div>
+    <br><br>
+</div>
+<footer class="visible-xs-block site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h5><strong>TOURISTO</strong> Tourism safety  © 2018</h5>
+            </div>
+            <div class="col-sm-6 social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        </div>
+    </div>
+</footer>
+</html>
+

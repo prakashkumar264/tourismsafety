@@ -1,0 +1,146 @@
+﻿@model tourismsafety.Models.feedback
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>feedback</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.userid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.userid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.photogalleryid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.photogalleryid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.locationid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.locationid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.purposeid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.purposeid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.hygiene)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.hygiene)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.food)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.food)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.transportation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.transportation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.beggars)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.beggars)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.accomodation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.accomodation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.womensafety)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.womensafety)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.miscellaneous)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.miscellaneous)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.tips)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.tips)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cultural)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cultural)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.emergency)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.emergency)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.localauthorities)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.localauthorities)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

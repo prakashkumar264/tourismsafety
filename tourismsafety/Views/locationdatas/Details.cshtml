@@ -1,0 +1,50 @@
+﻿@model tourismsafety.Models.locationdata
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <head>
+        <title></title>
+
+        <link href="~/css/semantic.css" rel="stylesheet" />
+        <script src="~/css/semantic.js"></script>
+        <link href="~/css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <br><br>
+        <div class="ui container">
+            <div class="ui grid">
+                <div class="two wide column">
+                    <img>
+                </div>
+                <div class="twelve wide column">
+                    <p>
+
+                        <div class="ui segment">
+                    <p class="ui yellow large label">Location</p>
+                    <div class="ui yellow segment">
+                        @Html.DisplayFor(model => model.locationname)
+                    </div>
+                    <p class="ui green large label">Problem</p>
+                    <div class="ui green segment">
+                        @Html.DisplayFor(model => model.hygieneissues)
+                    </div>
+                    <p class="ui blue large label">Solution</p>
+                    <div class="ui blue segment">
+                        @Html.DisplayFor(model => model.hygienesolution)
+                    </div>
+                </div>
+
+                </p>
+            </div>
+            <div class="two wide column">
+                <img>
+            </div>
+        </div>
+    </body>
+</html>

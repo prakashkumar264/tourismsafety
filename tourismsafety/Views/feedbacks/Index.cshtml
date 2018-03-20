@@ -1,0 +1,125 @@
+﻿@model IEnumerable<tourismsafety.Models.feedback>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.photogalleryid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.locationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.purposeid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hygiene)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.food)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.transportation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beggars)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accomodation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.womensafety)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.miscellaneous)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tips)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cultural)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emergency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.localauthorities)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.photogalleryid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.purposeid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hygiene)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.food)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transportation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beggars)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accomodation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.womensafety)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.miscellaneous)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tips)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cultural)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emergency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.localauthorities)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
